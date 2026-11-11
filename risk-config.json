@@ -1,0 +1,23 @@
+{
+  "repos": [
+    {
+      "name": "SIP.js",
+      "path": "targets/SIP.js",
+      "clone": "https://github.com/onsip/SIP.js.git",
+      "exposure": "LIBRARY",
+      "note": "Real open-source telecom library. Its runtime dependencies ship inside other people's products."
+    },
+    {
+      "name": "edge-gateway",
+      "path": "fixtures/edge-gateway",
+      "exposure": "PUBLIC_INTERNET",
+      "note": "Synthetic mock. Customer-facing API on the public internet."
+    },
+    {
+      "name": "batch-reporting",
+      "path": "fixtures/batch-reporting",
+      "exposure": "INTERNAL_BATCH",
+      "note": "Synthetic mock. Scheduled internal job, no inbound traffic."
+    }
+  ]
+}

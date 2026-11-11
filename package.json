@@ -1,0 +1,18 @@
+{
+  "name": "triage",
+  "version": "0.1.0",
+  "description": "Ranks dependency and engineering-hygiene risk across repositories by context, not raw CVE count.",
+  "private": true,
+  "scripts": {
+    "scan": "tsx src/cli.ts",
+    "scan:offline": "tsx src/cli.ts --offline",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": { "node": ">=22" },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}

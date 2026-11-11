@@ -1,0 +1,13 @@
+{
+  "name": "edge-gateway",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SYNTHETIC FIXTURE. A pretend public API. Old versions are pinned on purpose.",
+  "scripts": { "test": "node --test" },
+  "engines": { "node": ">=22" },
+  "dependencies": {
+    "express": "4.17.1",
+    "jsonwebtoken": "8.5.1",
+    "lodash": "4.17.20"
+  }
+}

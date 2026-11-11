@@ -1,0 +1,43 @@
+name: Triage Risk Gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  # Job 1: the tool checks itself (types + unit tests).
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm test
+
+  # Job 2: scan each repository separately, so the result shows which one fails the gate.
+  # edge-gateway is EXPECTED to fail: that red cross is the gate working.
+  scan:
+    needs: test
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        repo: [SIP.js, edge-gateway, batch-reporting]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Scan ${{ matrix.repo }} (exit 1 on any P1)
+        run: npm run scan -- --only "${{ matrix.repo }}" --md summary.md
+      - name: Publish summary
+        if: always()
+        run: cat summary.md >> "$GITHUB_STEP_SUMMARY"

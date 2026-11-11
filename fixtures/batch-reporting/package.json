@@ -1,0 +1,15 @@
+{
+  "name": "batch-reporting",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SYNTHETIC FIXTURE. A pretend internal batch job. Vulnerable packages are build tools only.",
+  "scripts": { "test": "echo \"Error: no test specified\" && exit 1" },
+  "engines": { "node": ">=16" },
+  "dependencies": {
+    "csv-parse": "5.5.6"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "3.11.0",
+    "mocha": "8.0.1"
+  }
+}

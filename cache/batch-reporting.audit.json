@@ -1,0 +1,1685 @@
+{
+  "capturedAt": "2026-11-11T12:58:43.099Z",
+  "full": {
+    "auditReportVersion": 2,
+    "vulnerabilities": {
+      "ansi-html": {
+        "name": "ansi-html",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1102319,
+            "name": "ansi-html",
+            "dependency": "ansi-html",
+            "title": "Uncontrolled Resource Consumption in ansi-html",
+            "url": "https://github.com/advisories/GHSA-whgm-jr23-g3j9",
+            "severity": "high",
+            "cwe": [
+              "CWE-400"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<0.0.8"
+          }
+        ],
+        "effects": [
+          "webpack-dev-server"
+        ],
+        "range": "<0.0.8",
+        "nodes": [
+          "node_modules/ansi-html"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      },
+      "anymatch": {
+        "name": "anymatch",
+        "severity": "moderate",
+        "isDirect": false,
+        "via": [
+          "micromatch"
+        ],
+        "effects": [
+          "chokidar"
+        ],
+        "range": "1.2.0 - 2.0.0",
+        "nodes": [
+          "node_modules/webpack-dev-server/node_modules/anymatch"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      },
+      "braces": {
+        "name": "braces",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1098094,
+            "name": "braces",
+            "dependency": "braces",
+            "title": "Uncontrolled resource consumption in braces",
+            "url": "https://github.com/advisories/GHSA-grv7-fg5c-xmjg",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-1050"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<3.0.3"
+          }
+        ],
+        "effects": [
+          "chokidar",
+          "micromatch"
+        ],
+        "range": "<3.0.3",
+        "nodes": [
+          "node_modules/micromatch/node_modules/braces",
+          "node_modules/webpack-dev-server/node_modules/braces"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      },
+      "chokidar": {
+        "name": "chokidar",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          "anymatch",
+          "braces",
+          "readdirp"
+        ],
+        "effects": [
+          "webpack-dev-server"
+        ],
+        "range": "1.3.0 - 2.1.8",
+        "nodes": [
+          "node_modules/webpack-dev-server/node_modules/chokidar"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      },
+      "csv-parse": {
+        "name": "csv-parse",
+        "severity": "moderate",
+        "isDirect": true,
+        "via": [
+          {
+            "source": 1193670,
+            "name": "csv-parse",
+            "dependency": "csv-parse",
+            "title": "node-csv: Prototype replacement still reachable via columns path",
+            "url": "https://github.com/advisories/GHSA-8cw4-87c7-c6xx",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-1321"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<7.0.2"
+          }
+        ],
+        "effects": [],
+        "range": "<7.0.2",
+        "nodes": [
+          "node_modules/csv-parse"
+        ],
+        "fixAvailable": {
+          "name": "csv-parse",
+          "version": "7.0.3",
+          "isSemVerMajor": true
+        }
+      },
+      "debug": {
+        "name": "debug",
+        "severity": "low",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1096793,
+            "name": "debug",
+            "dependency": "debug",
+            "title": "Regular Expression Denial of Service in debug",
+            "url": "https://github.com/advisories/GHSA-gxpj-cx7g-858c",
+            "severity": "low",
+            "cwe": [
+              "CWE-400"
+            ],
+            "cvss": {
+              "score": 3.7,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+            },
+            "range": ">=3.2.0 <3.2.7"
+          }
+        ],
+        "effects": [
+          "mocha"
+        ],
+        "range": "3.2.0 - 3.2.6",
+        "nodes": [
+          "node_modules/debug"
+        ],
+        "fixAvailable": {
+          "name": "mocha",
+          "version": "8.4.0",
+          "isSemVerMajor": false
+        }
+      },
+      "decode-uri-component": {
+        "name": "decode-uri-component",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1147955,
+            "name": "decode-uri-component",
+            "dependency": "decode-uri-component",
+            "title": "decode-uri-component: Denial of service via exponential decoding of malformed percent-encoded input",
+            "url": "https://github.com/advisories/GHSA-vcc3-ghjq-m6fr",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-400",
+              "CWE-405",
+              "CWE-407",
+              "CWE-1176"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<=0.4.2"
+          },
+          {
+            "source": 1243857,
+            "name": "decode-uri-component",
+            "dependency": "decode-uri-component",
+            "title": "decode-uri-component vulnerable to denial of service via quadratic replacement of percent-encoded runs",
+            "url": "https://github.com/advisories/GHSA-qr28-fpjm-wq7f",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-407"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<=0.5.0"
+          }
+        ],
+        "effects": [
+          "source-map-resolve"
+        ],
+        "range": "<=0.5.0",
+        "nodes": [
+          "node_modules/decode-uri-component"
+        ],
+        "fixAvailable": true
+      },
+      "diff": {
+        "name": "diff",
+        "severity": "low",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1112704,
+            "name": "diff",
+            "dependency": "diff",
+            "title": "jsdiff has a Denial of Service vulnerability in parsePatch and applyPatch",
+            "url": "https://github.com/advisories/GHSA-73rr-hh4g-fpgx",
+            "severity": "low",
+            "cwe": [
+              "CWE-400",
+              "CWE-1333"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=4.0.0 <4.0.4"
+          }
+        ],
+        "effects": [
+          "mocha"
+        ],
+        "range": "4.0.0 - 4.0.3",
+        "nodes": [
+          "node_modules/diff"
+        ],
+        "fixAvailable": {
+          "name": "mocha",
+          "version": "8.4.0",
+          "isSemVerMajor": false
+        }
+      },
+      "http-proxy-middleware": {
+        "name": "http-proxy-middleware",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1100223,
+            "name": "http-proxy-middleware",
+            "dependency": "http-proxy-middleware",
+            "title": "Denial of service in http-proxy-middleware",
+            "url": "https://github.com/advisories/GHSA-c7qv-q95q-8v27",
+            "severity": "high",
+            "cwe": [
+              "CWE-400"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<2.0.7"
+          },
+          {
+            "source": 1121360,
+            "name": "http-proxy-middleware",
+            "dependency": "http-proxy-middleware",
+            "title": "http-proxy-middleware `router` host+path substring matching allows Host-header-driven backend routing bypass",
+            "url": "https://github.com/advisories/GHSA-64mm-vxmg-q3vj",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-20",
+              "CWE-187"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": ">=0.16.0 <2.0.10"
+          },
+          "micromatch"
+        ],
+        "effects": [
+          "webpack-dev-server"
+        ],
+        "range": "<=2.0.10-beta.0",
+        "nodes": [
+          "node_modules/http-proxy-middleware"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      },
+      "ip": {
+        "name": "ip",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1101851,
+            "name": "ip",
+            "dependency": "ip",
+            "title": "ip SSRF improper categorization in isPublic",
+            "url": "https://github.com/advisories/GHSA-2p57-rm9w-gvfp",
+            "severity": "high",
+            "cwe": [
+              "CWE-918"
+            ],
+            "cvss": {
+              "score": 8.1,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            },
+            "range": "<=2.0.1"
+          }
+        ],
+        "effects": [
+          "webpack-dev-server"
+        ],
+        "range": "*",
+        "nodes": [
+          "node_modules/ip"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      },
+      "js-yaml": {
+        "name": "js-yaml",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1112714,
+            "name": "js-yaml",
+            "dependency": "js-yaml",
+            "title": "js-yaml has prototype pollution in merge (<<)",
+            "url": "https://github.com/advisories/GHSA-mh29-5h37-fv8m",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-1321"
+            ],
+            "cvss": {
+              "score": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+            },
+            "range": "<3.14.2"
+          },
+          {
+            "source": 1121859,
+            "name": "js-yaml",
+            "dependency": "js-yaml",
+            "title": "JS-YAML: Quadratic-complexity DoS in merge key handling via repeated aliases",
+            "url": "https://github.com/advisories/GHSA-h67p-54hq-rp68",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-407"
+            ],
+            "cvss": {
+              "score": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+            },
+            "range": "<3.15.0"
+          },
+          {
+            "source": 1123912,
+            "name": "js-yaml",
+            "dependency": "js-yaml",
+            "title": "js-yaml: YAML merge-key chains can force quadratic CPU consumption",
+            "url": "https://github.com/advisories/GHSA-52cp-r559-cp3m",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-407"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=3.0.0 <3.15.0"
+          },
+          {
+            "source": 1138114,
+            "name": "js-yaml",
+            "dependency": "js-yaml",
+            "title": "JS-YAML: Quadratic CPU consumption in !!omap resolution (3.x and 4.x) — CVE-2026-59870 fix not backported",
+            "url": "https://github.com/advisories/GHSA-5p4m-2wfm-xmqj",
+            "severity": "high",
+            "cwe": [
+              "CWE-407"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=3.0.0 <3.15.1"
+          },
+          {
+            "source": 1193726,
+            "name": "js-yaml",
+            "dependency": "js-yaml",
+            "title": "js-yaml: maxTotalMergeKeys does not limit CPU use for empty merge sources",
+            "url": "https://github.com/advisories/GHSA-2883-xcg3-v3hh",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-407"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=3.0.0 <3.15.2"
+          }
+        ],
+        "effects": [
+          "mocha"
+        ],
+        "range": "<=3.15.1",
+        "nodes": [
+          "node_modules/js-yaml"
+        ],
+        "fixAvailable": {
+          "name": "mocha",
+          "version": "8.4.0",
+          "isSemVerMajor": false
+        }
+      },
+      "micromatch": {
+        "name": "micromatch",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1098681,
+            "name": "micromatch",
+            "dependency": "micromatch",
+            "title": "Regular Expression Denial of Service (ReDoS) in micromatch",
+            "url": "https://github.com/advisories/GHSA-952p-6rrq-rcjv",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-1333"
+            ],
+            "cvss": {
+              "score": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+            },
+            "range": "<4.0.8"
+          },
+          "braces"
+        ],
+        "effects": [
+          "anymatch",
+          "http-proxy-middleware",
+          "readdirp"
+        ],
+        "range": "<=4.0.7",
+        "nodes": [
+          "node_modules/micromatch"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      },
+      "minimatch": {
+        "name": "minimatch",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1096485,
+            "name": "minimatch",
+            "dependency": "minimatch",
+            "title": "minimatch ReDoS vulnerability",
+            "url": "https://github.com/advisories/GHSA-f8q6-p94x-37v3",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-1333"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<3.0.5"
+          },
+          {
+            "source": 1113459,
+            "name": "minimatch",
+            "dependency": "minimatch",
+            "title": "minimatch has a ReDoS via repeated wildcards with non-matching literal in pattern",
+            "url": "https://github.com/advisories/GHSA-3ppc-4f35-3m26",
+            "severity": "high",
+            "cwe": [
+              "CWE-1333"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<3.1.3"
+          },
+          {
+            "source": 1113538,
+            "name": "minimatch",
+            "dependency": "minimatch",
+            "title": "minimatch has ReDoS: matchOne() combinatorial backtracking via multiple non-adjacent GLOBSTAR segments",
+            "url": "https://github.com/advisories/GHSA-7r86-cg39-jmmj",
+            "severity": "high",
+            "cwe": [
+              "CWE-407"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<3.1.3"
+          },
+          {
+            "source": 1113546,
+            "name": "minimatch",
+            "dependency": "minimatch",
+            "title": "minimatch ReDoS: nested *() extglobs generate catastrophically backtracking regular expressions",
+            "url": "https://github.com/advisories/GHSA-23c5-xmqv-rm74",
+            "severity": "high",
+            "cwe": [
+              "CWE-1333"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<3.1.4"
+          }
+        ],
+        "effects": [
+          "mocha"
+        ],
+        "range": "<=3.1.3",
+        "nodes": [
+          "node_modules/minimatch"
+        ],
+        "fixAvailable": {
+          "name": "mocha",
+          "version": "8.4.0",
+          "isSemVerMajor": false
+        }
+      },
+      "mocha": {
+        "name": "mocha",
+        "severity": "high",
+        "isDirect": true,
+        "via": [
+          "debug",
+          "diff",
+          "js-yaml",
+          "minimatch",
+          "serialize-javascript"
+        ],
+        "effects": [],
+        "range": "5.1.0 - 12.0.0-beta-2",
+        "nodes": [
+          "node_modules/mocha"
+        ],
+        "fixAvailable": {
+          "name": "mocha",
+          "version": "8.4.0",
+          "isSemVerMajor": false
+        }
+      },
+      "node-forge": {
+        "name": "node-forge",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1088227,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Prototype Pollution in node-forge debug API.",
+            "url": "https://github.com/advisories/GHSA-5rrq-pxf6-6jx5",
+            "severity": "low",
+            "cwe": [
+              "CWE-1321"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<1.0.0"
+          },
+          {
+            "source": 1088229,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "URL parsing in node-forge could lead to undesired behavior.",
+            "url": "https://github.com/advisories/GHSA-gf8q-jrpm-jvxq",
+            "severity": "low",
+            "cwe": [
+              "CWE-601"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<1.0.0"
+          },
+          {
+            "source": 1088746,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Improper Verification of Cryptographic Signature in `node-forge`",
+            "url": "https://github.com/advisories/GHSA-2r2c-g63r-vccr",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-347"
+            ],
+            "cvss": {
+              "score": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N"
+            },
+            "range": "<1.3.0"
+          },
+          {
+            "source": 1093719,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Open Redirect in node-forge",
+            "url": "https://github.com/advisories/GHSA-8fr3-hfg3-gpgp",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-601"
+            ],
+            "cvss": {
+              "score": 6.1,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N"
+            },
+            "range": "<1.0.0"
+          },
+          {
+            "source": 1102321,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Improper Verification of Cryptographic Signature in node-forge",
+            "url": "https://github.com/advisories/GHSA-x4jg-mjrx-434g",
+            "severity": "high",
+            "cwe": [
+              "CWE-347"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+            },
+            "range": "<1.3.0"
+          },
+          {
+            "source": 1102322,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Improper Verification of Cryptographic Signature in node-forge",
+            "url": "https://github.com/advisories/GHSA-cfm4-qjh2-4765",
+            "severity": "high",
+            "cwe": [
+              "CWE-347"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+            },
+            "range": "<1.3.0"
+          },
+          {
+            "source": 1110996,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "node-forge has ASN.1 Unbounded Recursion",
+            "url": "https://github.com/advisories/GHSA-554w-wpv2-vw27",
+            "severity": "high",
+            "cwe": [
+              "CWE-674"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<1.3.2"
+          },
+          {
+            "source": 1110998,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "node-forge has an Interpretation Conflict vulnerability via its ASN.1 Validator Desynchronization",
+            "url": "https://github.com/advisories/GHSA-5gfm-wpxj-wjgq",
+            "severity": "high",
+            "cwe": [
+              "CWE-436"
+            ],
+            "cvss": {
+              "score": 8.6,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:N/I:H/A:N"
+            },
+            "range": "<1.3.2"
+          },
+          {
+            "source": 1111068,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "node-forge is vulnerable to ASN.1 OID Integer Truncation",
+            "url": "https://github.com/advisories/GHSA-65ch-62r8-g69g",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-190"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<1.3.2"
+          },
+          {
+            "source": 1115545,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge has a basicConstraints bypass in its certificate chain verification (RFC 5280 violation)",
+            "url": "https://github.com/advisories/GHSA-2328-f5f3-gj25",
+            "severity": "high",
+            "cwe": [
+              "CWE-295"
+            ],
+            "cvss": {
+              "score": 7.4,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+            },
+            "range": "<=1.3.3"
+          },
+          {
+            "source": 1115546,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge has signature forgery in Ed25519 due to missing S > L check",
+            "url": "https://github.com/advisories/GHSA-q67f-28xg-22rw",
+            "severity": "high",
+            "cwe": [
+              "CWE-347"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+            },
+            "range": "<1.4.0"
+          },
+          {
+            "source": 1115548,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge has Denial of Service via Infinite Loop in BigInteger.modInverse() with Zero Input",
+            "url": "https://github.com/advisories/GHSA-5m6q-g25r-mvwx",
+            "severity": "high",
+            "cwe": [
+              "CWE-835"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<1.4.0"
+          },
+          {
+            "source": 1115612,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge has signature forgery in RSA-PKCS due to ASN.1 extra field  ",
+            "url": "https://github.com/advisories/GHSA-ppp5-5v6c-4jwp",
+            "severity": "high",
+            "cwe": [
+              "CWE-20",
+              "CWE-347"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+            },
+            "range": "<1.4.0"
+          },
+          {
+            "source": 1240912,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "node-forge RSA PKCS#1 v1.5 signature verification accepts extra nested DigestAlgorithm elements",
+            "url": "https://github.com/advisories/GHSA-86w9-cpqp-85rv",
+            "severity": "high",
+            "cwe": [
+              "CWE-347"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1244014,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: ASN.1 OID first arc truncation in asn1.oidToDer",
+            "url": "https://github.com/advisories/GHSA-4642-5mcj-2rqw",
+            "severity": "low",
+            "cwe": [
+              "CWE-190"
+            ],
+            "cvss": {
+              "score": 3.7,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1244015,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: Prototype Pollution in forge.http cookie handling via a malicious Set-Cookie",
+            "url": "https://github.com/advisories/GHSA-6wvx-3r32-xmcg",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-1321"
+            ],
+            "cvss": {
+              "score": 4.8,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:L"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1244016,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: TLS client crash when the server sends no certificate",
+            "url": "https://github.com/advisories/GHSA-525v-9gp9-w22h",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-476"
+            ],
+            "cvss": {
+              "score": 5.9,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1244017,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: Regular expression denial of service in PEM decoding (pem.decode)",
+            "url": "https://github.com/advisories/GHSA-7wch-p9px-956x",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-1333"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1244018,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: Denial of Service via infinite loop in BigInteger.modInverse() with negative input (incomplete fix of CVE-2026-33891)",
+            "url": "https://github.com/advisories/GHSA-h6cr-wjv9-3cpp",
+            "severity": "low",
+            "cwe": [
+              "CWE-835"
+            ],
+            "cvss": {
+              "score": 2.9,
+              "vectorString": "CVSS:3.1/AV:L/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1244019,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: verifyCertificateChain() removes trusted CA certificates with the same subject from the CA store",
+            "url": "https://github.com/advisories/GHSA-4487-j8r4-4g2f",
+            "severity": "low",
+            "cwe": [
+              "CWE-295",
+              "CWE-471"
+            ],
+            "cvss": {
+              "score": 3.7,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:L"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1244020,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: AES-GCM authentication bypass via unvalidated tagLength option",
+            "url": "https://github.com/advisories/GHSA-5cwg-6vw7-rj6p",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-354",
+              "CWE-1284"
+            ],
+            "cvss": {
+              "score": 5.9,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1244021,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: PKCS#12 MAC forgery and constant-key PBE via zero iteration count",
+            "url": "https://github.com/advisories/GHSA-jc66-7q78-782g",
+            "severity": "high",
+            "cwe": [
+              "CWE-354",
+              "CWE-1284"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1244022,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: Denial of service in TLS record processing via a record interleaved with a fragmented handshake message",
+            "url": "https://github.com/advisories/GHSA-8hrf-8g6f-7xwp",
+            "severity": "high",
+            "cwe": [
+              "CWE-248",
+              "CWE-476"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1244023,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: Denial of service in TLS record processing via call stack exhaustion",
+            "url": "https://github.com/advisories/GHSA-hqq3-7jhf-c5jx",
+            "severity": "high",
+            "cwe": [
+              "CWE-674"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1244024,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: X.509 basicConstraints bypass in verifyCertificateChain() via deprecated extension OIDs 2.5.29.10 and 2.5.29.13",
+            "url": "https://github.com/advisories/GHSA-5x38-2vff-x55p",
+            "severity": "high",
+            "cwe": [
+              "CWE-295",
+              "CWE-436"
+            ],
+            "cvss": {
+              "score": 7.4,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:N"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1245925,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: Certificate signature verified with the issuer's RSA signature scheme",
+            "url": "https://github.com/advisories/GHSA-9wg5-mj3p-v49q",
+            "severity": "low",
+            "cwe": [
+              "CWE-347"
+            ],
+            "cvss": {
+              "score": 3.7,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1245926,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: Incomplete PKCS#7 padding validation in AES/DES CBC and ECB decryption",
+            "url": "https://github.com/advisories/GHSA-2vgq-wchc-25w7",
+            "severity": "low",
+            "cwe": [
+              "CWE-20",
+              "CWE-354"
+            ],
+            "cvss": {
+              "score": 3.7,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1245927,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: X.509 pathLenConstraint not enforced by verifyCertificateChain() for CA certificates without keyUsage",
+            "url": "https://github.com/advisories/GHSA-h46v-rmh6-fq4f",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-295"
+            ],
+            "cvss": {
+              "score": 5.9,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1245928,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: ASN.1 resource exhaustion via BIT STRING decoding in asn1.fromDer",
+            "url": "https://github.com/advisories/GHSA-rhr8-3pm8-cq29",
+            "severity": "high",
+            "cwe": [
+              "CWE-400",
+              "CWE-674"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1245929,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: RSA PKCS#1 v1.5 signature forgery via non-canonical DigestInfo encoding",
+            "url": "https://github.com/advisories/GHSA-6qrw-m8cv-hcxf",
+            "severity": "high",
+            "cwe": [
+              "CWE-347"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+            },
+            "range": "<=1.4.0"
+          },
+          {
+            "source": 1246031,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: Ed25519 signature verification accepts small-order public keys",
+            "url": "https://github.com/advisories/GHSA-6889-vf6x-f3g5",
+            "severity": "low",
+            "cwe": [
+              "CWE-347"
+            ],
+            "cvss": {
+              "score": 3.7,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N"
+            },
+            "range": "<=1.4.2"
+          },
+          {
+            "source": 1246032,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: TLS client crash on an unsupported ServerHello compression method",
+            "url": "https://github.com/advisories/GHSA-w4xr-hqv8-ch44",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-20",
+              "CWE-248"
+            ],
+            "cvss": {
+              "score": 5.9,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<=1.4.2"
+          },
+          {
+            "source": 1246033,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: ReDoS in forge.http response header and cookie trimming",
+            "url": "https://github.com/advisories/GHSA-6cv4-p8m7-4r25",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-1333"
+            ],
+            "cvss": {
+              "score": 5.9,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": ">=0.1.2 <=1.4.2"
+          },
+          {
+            "source": 1246034,
+            "name": "node-forge",
+            "dependency": "node-forge",
+            "title": "Forge: TLS client crash on a handshake record received without a session",
+            "url": "https://github.com/advisories/GHSA-j8rw-jp99-435v",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-476"
+            ],
+            "cvss": {
+              "score": 5.9,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H"
+            },
+            "range": "<=1.4.2"
+          }
+        ],
+        "effects": [
+          "selfsigned"
+        ],
+        "range": "<=1.4.2",
+        "nodes": [
+          "node_modules/node-forge"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      },
+      "readdirp": {
+        "name": "readdirp",
+        "severity": "moderate",
+        "isDirect": false,
+        "via": [
+          "micromatch"
+        ],
+        "effects": [
+          "chokidar"
+        ],
+        "range": "2.2.0 - 2.2.1",
+        "nodes": [
+          "node_modules/webpack-dev-server/node_modules/readdirp"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      },
+      "selfsigned": {
+        "name": "selfsigned",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          "node-forge"
+        ],
+        "effects": [
+          "webpack-dev-server"
+        ],
+        "range": "1.1.1 - 1.10.14",
+        "nodes": [
+          "node_modules/selfsigned"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      },
+      "serialize-javascript": {
+        "name": "serialize-javascript",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1095131,
+            "name": "serialize-javascript",
+            "dependency": "serialize-javascript",
+            "title": "Insecure serialization leading to RCE in serialize-javascript",
+            "url": "https://github.com/advisories/GHSA-hxcc-f52p-wc94",
+            "severity": "high",
+            "cwe": [
+              "CWE-502"
+            ],
+            "cvss": {
+              "score": 8.1,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            },
+            "range": "<3.1.0"
+          },
+          {
+            "source": 1113686,
+            "name": "serialize-javascript",
+            "dependency": "serialize-javascript",
+            "title": "Serialize JavaScript is Vulnerable to RCE via RegExp.flags and Date.prototype.toISOString()",
+            "url": "https://github.com/advisories/GHSA-5c6j-r48x-rmvq",
+            "severity": "high",
+            "cwe": [
+              "CWE-96"
+            ],
+            "cvss": {
+              "score": 8.1,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:H/I:H/A:H"
+            },
+            "range": "<=7.0.2"
+          },
+          {
+            "source": 1243082,
+            "name": "serialize-javascript",
+            "dependency": "serialize-javascript",
+            "title": "Serialize JavaScript: Cross-site scripting (XSS) via unescaped </script at the end of a serialized function body",
+            "url": "https://github.com/advisories/GHSA-m5mm-p8h7-m29v",
+            "severity": "low",
+            "cwe": [
+              "CWE-79"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<7.1.3"
+          }
+        ],
+        "effects": [
+          "mocha"
+        ],
+        "range": "<=7.1.2",
+        "nodes": [
+          "node_modules/serialize-javascript"
+        ],
+        "fixAvailable": {
+          "name": "mocha",
+          "version": "8.4.0",
+          "isSemVerMajor": false
+        }
+      },
+      "sockjs": {
+        "name": "sockjs",
+        "severity": "moderate",
+        "isDirect": false,
+        "via": [
+          "uuid",
+          "websocket-driver"
+        ],
+        "effects": [
+          "webpack-dev-server"
+        ],
+        "range": ">=0.3.17",
+        "nodes": [
+          "node_modules/sockjs"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      },
+      "source-map-resolve": {
+        "name": "source-map-resolve",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          "decode-uri-component"
+        ],
+        "effects": [],
+        "range": ">=0.5.1",
+        "nodes": [
+          "node_modules/source-map-resolve"
+        ],
+        "fixAvailable": true
+      },
+      "uuid": {
+        "name": "uuid",
+        "severity": "moderate",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1119441,
+            "name": "uuid",
+            "dependency": "uuid",
+            "title": "uuid: Missing buffer bounds check in v3/v5/v6 when buf is provided",
+            "url": "https://github.com/advisories/GHSA-w5hq-g745-h8pq",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-787",
+              "CWE-1285"
+            ],
+            "cvss": {
+              "score": 7.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N"
+            },
+            "range": "<11.1.1"
+          }
+        ],
+        "effects": [
+          "sockjs",
+          "webpack-log"
+        ],
+        "range": "<11.1.1",
+        "nodes": [
+          "node_modules/uuid"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      },
+      "webpack-dev-middleware": {
+        "name": "webpack-dev-middleware",
+        "severity": "high",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1096729,
+            "name": "webpack-dev-middleware",
+            "dependency": "webpack-dev-middleware",
+            "title": "Path traversal in webpack-dev-middleware",
+            "url": "https://github.com/advisories/GHSA-wr3j-pwj9-hqq6",
+            "severity": "high",
+            "cwe": [
+              "CWE-22"
+            ],
+            "cvss": {
+              "score": 7.4,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N"
+            },
+            "range": "<=5.3.3"
+          },
+          {
+            "source": 1240027,
+            "name": "webpack-dev-middleware",
+            "dependency": "webpack-dev-middleware",
+            "title": "webpack-dev-middleware vulnerable to Path Traversal via non-slash-terminated publicPath",
+            "url": "https://github.com/advisories/GHSA-g84c-rxfj-3j2c",
+            "severity": "high",
+            "cwe": [
+              "CWE-22"
+            ],
+            "cvss": {
+              "score": 7.4,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:H/I:N/A:N"
+            },
+            "range": "<7.4.5"
+          },
+          "webpack-log"
+        ],
+        "effects": [
+          "webpack-dev-server"
+        ],
+        "range": "<=7.4.4",
+        "nodes": [
+          "node_modules/webpack-dev-middleware"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      },
+      "webpack-dev-server": {
+        "name": "webpack-dev-server",
+        "severity": "high",
+        "isDirect": true,
+        "via": [
+          {
+            "source": 1108429,
+            "name": "webpack-dev-server",
+            "dependency": "webpack-dev-server",
+            "title": "webpack-dev-server users' source code may be stolen when they access a malicious web site with non-Chromium based browser",
+            "url": "https://github.com/advisories/GHSA-9jgg-88mc-972h",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-346"
+            ],
+            "cvss": {
+              "score": 6.5,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:N/A:N"
+            },
+            "range": "<=5.2.0"
+          },
+          {
+            "source": 1108430,
+            "name": "webpack-dev-server",
+            "dependency": "webpack-dev-server",
+            "title": "webpack-dev-server users' source code may be stolen when they access a malicious web site",
+            "url": "https://github.com/advisories/GHSA-4v9v-hfq4-rm2v",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-749"
+            ],
+            "cvss": {
+              "score": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
+            },
+            "range": "<=5.2.0"
+          },
+          {
+            "source": 1119074,
+            "name": "webpack-dev-server",
+            "dependency": "webpack-dev-server",
+            "title": "webpack-dev-server vulnerable to cross-origin source code exposure on non-HTTPS origins",
+            "url": "https://github.com/advisories/GHSA-79cf-xcqc-c78w",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-749"
+            ],
+            "cvss": {
+              "score": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:N/A:N"
+            },
+            "range": "<=5.2.3"
+          },
+          {
+            "source": 1121087,
+            "name": "webpack-dev-server",
+            "dependency": "webpack-dev-server",
+            "title": "webpack-dev-server vulnerable to HMR WebSocket interception via permissive user proxies",
+            "url": "https://github.com/advisories/GHSA-mx8g-39q3-5c79",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-346",
+              "CWE-441"
+            ],
+            "cvss": {
+              "score": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+            },
+            "range": "<5.2.5"
+          },
+          {
+            "source": 1123965,
+            "name": "webpack-dev-server",
+            "dependency": "webpack-dev-server",
+            "title": "webpack-dev-server vulnerable to cross-site request forgery via internal developer endpoints",
+            "url": "https://github.com/advisories/GHSA-f5vj-f2hx-8m93",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-352",
+              "CWE-749"
+            ],
+            "cvss": {
+              "score": 4.7,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:L"
+            },
+            "range": "<=5.2.5"
+          },
+          {
+            "source": 1123966,
+            "name": "webpack-dev-server",
+            "dependency": "webpack-dev-server",
+            "title": "webpack-dev-server vulnerable to denial of service via a malformed Host or Origin header",
+            "url": "https://github.com/advisories/GHSA-m28w-2pqf-7qgj",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-20",
+              "CWE-248"
+            ],
+            "cvss": {
+              "score": 5.3,
+              "vectorString": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L"
+            },
+            "range": "<=5.2.5"
+          },
+          "ansi-html",
+          "chokidar",
+          "http-proxy-middleware",
+          "ip",
+          "selfsigned",
+          "sockjs",
+          "webpack-dev-middleware",
+          "webpack-log"
+        ],
+        "effects": [],
+        "range": "<=5.2.7",
+        "nodes": [
+          "node_modules/webpack-dev-server"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      },
+      "webpack-log": {
+        "name": "webpack-log",
+        "severity": "moderate",
+        "isDirect": false,
+        "via": [
+          "uuid"
+        ],
+        "effects": [
+          "webpack-dev-middleware",
+          "webpack-dev-server"
+        ],
+        "range": "1.1.0 - 2.0.0",
+        "nodes": [
+          "node_modules/webpack-log"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      },
+      "websocket-driver": {
+        "name": "websocket-driver",
+        "severity": "critical",
+        "isDirect": false,
+        "via": [
+          {
+            "source": 1123482,
+            "name": "websocket-driver",
+            "dependency": "websocket-driver",
+            "title": "websocket-driver: Resource limit bypass via message compression",
+            "url": "https://github.com/advisories/GHSA-mp7j-qc5w-4988",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-770"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<0.7.5"
+          },
+          {
+            "source": 1123483,
+            "name": "websocket-driver",
+            "dependency": "websocket-driver",
+            "title": "websocket-driver: Message corruption via abuse of protocol length headers",
+            "url": "https://github.com/advisories/GHSA-xv26-6w52-cph6",
+            "severity": "critical",
+            "cwe": [
+              "CWE-130"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<0.7.5"
+          }
+        ],
+        "effects": [
+          "sockjs"
+        ],
+        "range": "<=0.7.4",
+        "nodes": [
+          "node_modules/websocket-driver"
+        ],
+        "fixAvailable": {
+          "name": "webpack-dev-server",
+          "version": "6.1.0",
+          "isSemVerMajor": true
+        }
+      }
+    },
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 2,
+        "moderate": 6,
+        "high": 16,
+        "critical": 1,
+        "total": 25
+      },
+      "dependencies": {
+        "prod": 2,
+        "dev": 606,
+        "optional": 5,
+        "peer": 57,
+        "peerOptional": 0,
+        "total": 607
+      }
+    }
+  },
+  "prodOnly": {
+    "auditReportVersion": 2,
+    "vulnerabilities": {
+      "csv-parse": {
+        "name": "csv-parse",
+        "severity": "moderate",
+        "isDirect": true,
+        "via": [
+          {
+            "source": 1193670,
+            "name": "csv-parse",
+            "dependency": "csv-parse",
+            "title": "node-csv: Prototype replacement still reachable via columns path",
+            "url": "https://github.com/advisories/GHSA-8cw4-87c7-c6xx",
+            "severity": "moderate",
+            "cwe": [
+              "CWE-1321"
+            ],
+            "cvss": {
+              "score": 0,
+              "vectorString": null
+            },
+            "range": "<7.0.2"
+          }
+        ],
+        "effects": [],
+        "range": "<7.0.2",
+        "nodes": [
+          "node_modules/csv-parse"
+        ],
+        "fixAvailable": {
+          "name": "csv-parse",
+          "version": "7.0.3",
+          "isSemVerMajor": true
+        }
+      }
+    },
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 1,
+        "high": 0,
+        "critical": 0,
+        "total": 1
+      },
+      "dependencies": {
+        "prod": 2,
+        "dev": 606,
+        "optional": 5,
+        "peer": 57,
+        "peerOptional": 0,
+        "total": 607
+      }
+    }
+  }
+}
